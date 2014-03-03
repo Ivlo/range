@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+  body {
+    padding:0;
+    margin: 0;
+  }
+  .wrapper {
+    width:500px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left:500px;
+  }
+  .m_range {
+    position: relative;
+  }
+  [data-range-bar] {
+    position:relative;
+    top:15px;
+    display: block;
+    height: 20px;
+    background-color: green;
+    border-radius: 20px;
+  }
+  [data-range-button] {
+    position:absolute;
+    top:0;
+    left:0;
+    width:50px;
+    height: 50px;
+    background-color:blue;
+    cursor: pointer;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="m_range" data-range>
+      <span data-range-bar></span>
+      <span data-range-button></span>
+    </div>
+
+  </div>
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="underscore-min.js"></script>
+  <script type="text/javascript" src="range.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('[data-range]').range();
+    });
+  </script>
+  
+</body>
+</html>
